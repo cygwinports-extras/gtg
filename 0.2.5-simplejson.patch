@@ -1,0 +1,39 @@
+--- origsrc/gtg-0.2.5/GTG/plugins/import-json.gtg-plugin	2011-12-01 05:52:52.000000000 -0600
++++ src/gtg-0.2.5/GTG/plugins/import-json.gtg-plugin	2011-12-08 22:07:48.509326300 -0600
+@@ -6,4 +6,4 @@ Description='''Imports tasks from JSON f
+ Authors=Bryce Harrington <bryce@canonical.com>
+ Version=0.1
+ Enabled=False
+-Dependencies=re,urllib2,simplejson
++Dependencies=re,urllib2,json
+--- origsrc/gtg-0.2.5/GTG/plugins/import_json/import_json.py	2011-12-01 05:52:52.000000000 -0600
++++ src/gtg-0.2.5/GTG/plugins/import_json/import_json.py	2011-12-08 22:08:05.279349400 -0600
+@@ -41,7 +41,7 @@ import gtk
+ import os
+ import re
+ import urllib2
+-import simplejson as json
++import json
+ 
+ class pluginImportJson:
+     
+--- origsrc/gtg-0.2.5/GTG/plugins/rtm-sync.gtg-plugin	2011-12-01 05:52:52.000000000 -0600
++++ src/gtg-0.2.5/GTG/plugins/rtm-sync.gtg-plugin	2011-12-08 22:09:59.369506900 -0600
+@@ -7,5 +7,5 @@ Legal note: This product is not endorsed
+ Remember The Milk."""
+ Authors=Luca Invernizzi <invernizzi.l@gmail.com>
+ Version=0.3
+-Dependencies=xml,subprocess,threading,gobject,gtk,time,pickle,datetime,logging,hashlib,urllib,warnings,simplejson,dateutil
++Dependencies=xml,subprocess,threading,gobject,gtk,time,pickle,datetime,logging,hashlib,urllib,warnings,json,dateutil
+ Enabled=False
+--- origsrc/gtg-0.2.5/GTG/plugins/rtm_sync/pyrtm/rtm.py	2011-12-01 05:52:52.000000000 -0600
++++ src/gtg-0.2.5/GTG/plugins/rtm_sync/pyrtm/rtm.py	2011-12-08 22:09:46.999489800 -0600
+@@ -18,7 +18,7 @@ warnings.simplefilter('default', ImportW
+ 
+ _use_simplejson = False
+ try:
+-    import simplejson
++    import json as simplejson
+     _use_simplejson = True
+ except ImportError:
+     try:

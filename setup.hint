@@ -1,0 +1,7 @@
+category: Gnome
+requires: python python-bugz python-cairo python-cheetah python-configobj python-dbus python-evolution python-gobject python-gtk2.0 python-xdg
+sdesc: "Getting Things GNOME! organizer"
+ldesc: "Getting Things GNOME! is an organizer for the GNOME desktop 
+environment. GTG focuses on usability and ease of use. Its main 
+objective is to provide a simple and yet flexible organization tool for 
+life and work."

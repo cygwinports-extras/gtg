@@ -1,0 +1,11 @@
+--- origsrc/gtg-0.2.5/GTG/plugins/bugzilla/bug.py	2011-12-01 05:52:52.000000000 -0600
++++ src/gtg-0.2.5/GTG/plugins/bugzilla/bug.py	2011-12-08 22:44:00.632323800 -0600
+@@ -14,7 +14,7 @@
+ # You should have received a copy of the GNU General Public License along with
+ # this program.  If not, see <http://www.gnu.org/licenses/>.
+ 
+-from bugz import Bugz
++from bugz.bugzilla import Bugz
+ 
+ class Bug:
+     def __init__(self, base, nb):
