@@ -1,0 +1,12 @@
+inherit distutils
+
+NAME="gtg"
+VERSION=0.3
+RELEASE=1
+CATEGORY="GNOME"
+SUMMARY="Getting Things GNOME! organizer"
+DESCRIPTION="Getting Things GNOME! is an organizer for the GNOME desktop
+environment. GTG focuses on usability and ease of use. Its main objective
+is to provide a simple and yet flexible organization tool for life and work."
+HOMEPAGE="http://gtg.fritalk.com/"
+SRC_URI="http://launchpad.net/gtg/${PV[1]}.${PV[2]}/${PV}/+download/${P}.tar.gz"
